@@ -14,6 +14,9 @@ WORKDIR /app
 COPY go.mod /app/go.mod
 COPY go.sum /app/go.sum
 
+COPY ../docker /app/your-docker
+ENV CODECRAFTERS_SUBMISSION_DIR="/app/your-docker"
+
 # Cache go modules
 RUN go mod download
 

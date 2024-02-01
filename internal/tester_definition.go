@@ -2,6 +2,7 @@ package internal
 
 import (
 	testerutils "github.com/codecrafters-io/tester-utils"
+	"time"
 )
 
 var testerDefinition = testerutils.TesterDefinition{
@@ -11,6 +12,7 @@ var testerDefinition = testerutils.TesterDefinition{
 		{
 			Slug:                    "init",
 			TestFunc:                testBasicExec,
+			Timeout:				 60 * time.Second,
 		},
 		{
 			Slug:                    "stdio",
