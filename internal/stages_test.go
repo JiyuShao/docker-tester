@@ -13,13 +13,13 @@ func TestStages(t *testing.T) {
 
 	// Official test cases
 	testCases := map[string]tester_utils_testing.TesterOutputTestCase{
-		"basic_exec_failure": {
-			UntilStageSlug:      "init",
-			CodePath:            "./test_helpers/stages/basic_exec_failure",
-			ExpectedExitCode:    1,
-			StdoutFixturePath:   "./test_helpers/fixtures/basic_exec/failure",
-			NormalizeOutputFunc: normalizeTesterOutput,
-		},
+		// "basic_exec_failure": {
+		// 	UntilStageSlug:      "init",
+		// 	CodePath:            "./test_helpers/stages/basic_exec_failure",
+		// 	ExpectedExitCode:    1,
+		// 	StdoutFixturePath:   "./test_helpers/fixtures/basic_exec/failure",
+		// 	NormalizeOutputFunc: normalizeTesterOutput,
+		// },
 		"basic_exec_success": {
 			UntilStageSlug:      "init",
 			CodePath:            "./test_helpers/stages/basic_exec",
@@ -34,20 +34,20 @@ func TestStages(t *testing.T) {
 		// 	StdoutFixturePath:   "./test_helpers/fixtures/stdio/failure",
 		// 	NormalizeOutputFunc: normalizeTesterOutput,
 		// },
-		// "stdio_success": {
-		// 	UntilStageSlug:      "stdio",
-		// 	CodePath:            "./test_helpers/stages/stdio",
-		// 	ExpectedExitCode:    0,
-		// 	StdoutFixturePath:   "./test_helpers/fixtures/stdio/success",
-		// 	NormalizeOutputFunc: normalizeTesterOutput,
-		// },
-		// "exit_code_success": {
-		// 	UntilStageSlug:      "stdio",
-		// 	CodePath:            "./test_helpers/stages/exit_code",
-		// 	ExpectedExitCode:    0,
-		// 	StdoutFixturePath:   "./test_helpers/fixtures/exit_code/success",
-		// 	NormalizeOutputFunc: normalizeTesterOutput,
-		// },
+		"stdio_success": {
+			UntilStageSlug:      "stdio",
+			CodePath:            "./test_helpers/stages/stdio",
+			ExpectedExitCode:    0,
+			StdoutFixturePath:   "./test_helpers/fixtures/stdio/success",
+			NormalizeOutputFunc: normalizeTesterOutput,
+		},
+		"exit_code_success": {
+			UntilStageSlug:      "stdio",
+			CodePath:            "./test_helpers/stages/exit_code",
+			ExpectedExitCode:    0,
+			StdoutFixturePath:   "./test_helpers/fixtures/exit_code/success",
+			NormalizeOutputFunc: normalizeTesterOutput,
+		},
 		// "fs_isolation_failure": {
 		// 	UntilStageSlug:      "fs_isolation",
 		// 	CodePath:            "./test_helpers/stages/exit_code",
@@ -55,13 +55,13 @@ func TestStages(t *testing.T) {
 		// 	StdoutFixturePath:   "./test_helpers/fixtures/fs_isolation/failure",
 		// 	NormalizeOutputFunc: normalizeTesterOutput,
 		// },
-		// "fs_isolation_success": {
-		// 	UntilStageSlug:      "fs_isolation",
-		// 	CodePath:            "./test_helpers/stages/fs_isolation",
-		// 	ExpectedExitCode:    0,
-		// 	StdoutFixturePath:   "./test_helpers/fixtures/fs_isolation/success",
-		// 	NormalizeOutputFunc: normalizeTesterOutput,
-		// },
+		"fs_isolation_success": {
+			UntilStageSlug:      "fs_isolation",
+			CodePath:            "./test_helpers/stages/fs_isolation",
+			ExpectedExitCode:    0,
+			StdoutFixturePath:   "./test_helpers/fixtures/fs_isolation/success",
+			NormalizeOutputFunc: normalizeTesterOutput,
+		},
 		// "process_isolation_success": {
 		// 	UntilStageSlug:      "process_isolation",
 		// 	CodePath:            "./test_helpers/stages/process_isolation",
