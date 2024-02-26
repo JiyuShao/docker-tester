@@ -62,13 +62,13 @@ func TestStages(t *testing.T) {
 			StdoutFixturePath:   "./test_helpers/fixtures/fs_isolation/success",
 			NormalizeOutputFunc: normalizeTesterOutput,
 		},
-		// "process_isolation_success": {
-		// 	UntilStageSlug:      "process_isolation",
-		// 	CodePath:            "./test_helpers/stages/process_isolation",
-		// 	ExpectedExitCode:    0,
-		// 	StdoutFixturePath:   "./test_helpers/fixtures/process_isolation/success",
-		// 	NormalizeOutputFunc: normalizeTesterOutput,
-		// },
+		"process_isolation_success": {
+			UntilStageSlug:      "process_isolation",
+			CodePath:            "./test_helpers/stages/process_isolation",
+			ExpectedExitCode:    0,
+			StdoutFixturePath:   "./test_helpers/fixtures/process_isolation/success",
+			NormalizeOutputFunc: normalizeTesterOutput,
+		},
 		// "fetch_from_registry_failure": {
 		// 	UntilStageSlug:      "fetch_from_registry",
 		// 	CodePath:            "./test_helpers/stages/process_isolation",
